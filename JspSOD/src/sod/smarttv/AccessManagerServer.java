@@ -266,7 +266,7 @@ public class AccessManagerServer {
 	protected void beginListeningMulti(){
 		final int bufsize = 0x1000;
 
-		listener_multi = NetworkUtils.createMutlicastSocket(Constants.Multicast_IP, Constants.Multicast_Port);
+		listener_multi = NetworkUtils.createMutlicastSocket(Constants.Multicast_IP, Constants.Multicast_Port_Send);
 		
 		ThreadEx.invoke(null, new ActionEx() {			
 			@Override

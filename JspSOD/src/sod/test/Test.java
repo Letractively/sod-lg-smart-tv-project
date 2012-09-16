@@ -21,7 +21,8 @@ import sod.common.*;
 
 public class Test {
 	final static String ServerIP = "127.0.0.1";
-	final static int ServerPort = 6789; 
+	final static int ServerPort = 6721; 
+	final static int CheckingPeriod = Constants.Default_CheckingPeriod;
 	
 	static Logable logger;
 	static AccessManagerServer server; 
@@ -76,13 +77,13 @@ public class Test {
 	}
 	
 	public static void testServer(){
-		
+
 		//server side
 		server = new AccessManagerServer();
 		ServerConfig conf = new ServerConfig();
-		conf.Timeout = 10000;
+		conf.Timeout = Constants.Default_Timeout;
 		conf.Port = ServerPort;
-		conf.CheckingPeriod = 2000;
+		conf.CheckingPeriod = CheckingPeriod;
 		conf.serviceName = "TestService";
 		server.setConnectHandler(new ConnectHandler() {			
 			@Override
@@ -108,19 +109,19 @@ public class Test {
 		
 		//end of test		
 		ThreadEx.sleep(1000);
-		logger.log("press enter to terminate client.\n");
+		logger.log("press enter to terminate server.\n");
 		waitfor();
 		
 		//wait until server drop client.
 		logger.log("waiting until server drop client.\n");
-		ThreadEx.sleep(11000);
+		ThreadEx.sleep(Constants.Default_Timeout + 1000);
 		server.shutdown();
 		
 		logger.log("finishing test...\n");
 	}
 	
 	public static void testClient(){
-
+		
 		//client side
 		client = new AccessManager();
 		ServerInfo svinfo = new ServerInfo();
@@ -137,73 +138,28 @@ public class Test {
 		Packet pkt = new Packet();
 		pkt.signiture = 1;
 		pkt.push("a string on packet");
-		client.send(pkt);
 		
+		ThreadEx.sleep(100);
+		client.send(pkt);		
+
+		//end of test		
+		ThreadEx.sleep(5000);
 		client.dispose();
 	}
 	
 	public static void testAccessManager(){
 		
-		//server side
-		server = new AccessManagerServer();
-		ServerConfig conf = new ServerConfig();
-		conf.Timeout = 10000;
-		conf.Port = ServerPort;
-		conf.CheckingPeriod = 2000;
-		conf.serviceName = "TestService";
-		server.setConnectHandler(new ConnectHandler() {			
-			@Override
-			public void onConnect(int connid) {
-				logger.log("(server): new connection is accepted - " + connid + "\n");				
-			}
-		});
-		server.setDisconnectHandler(new DisconnectHandler() {
+		ThreadEx.invoke(null, new ActionEx() {
 			
 			@Override
-			public void onDisconnect(int connid) {
-				logger.log("(server): client is disconnected - " + connid + "\n");				
+			public void work(Object arg) {
+				//will die after 5000 ms.
+				testClient();
 			}
 		});
-		server.setReceiveHandler(new ServerReceiveHandler() {			
-			@Override
-			public void onReceive(Packet pkt, int connid) {
-				logger.log("(server): a packet from client - " + connid + "\n");
-				server.send(pkt, connid);
-			}
-		});
-		server.start(conf);
 		
-		//client side
-		client = new AccessManager();
-		ServerInfo svinfo = new ServerInfo();
-		svinfo.EndPoint = new InetSocketAddress(ServerIP, ServerPort);
-		client.setReceiveHandler(new ReceiveHandler() {			
-			@Override
-			public void onReceive(Packet pkt) {
-				logger.log("(client): a packet from server - " + (String)pkt.pop() + "\n");
-			}
-		});
-
-		client.connect(svinfo);
+		testServer();
 		
-		Packet pkt = new Packet();
-		pkt.signiture = 1;
-		pkt.push("a string on packet");
-		client.send(pkt);
-		
-		//end of test		
-		ThreadEx.sleep(1000);
-		logger.log("press enter to terminate client.\n");
-		waitfor();
-		
-		client.dispose();
-		
-		//wait until server drop client.
-		logger.log("waiting until server drop client.\n");
-		ThreadEx.sleep(11000);
-		server.shutdown();
-		
-		logger.log("finishing test...\n");
 	}
 	
 	public static void testTransceiver(){

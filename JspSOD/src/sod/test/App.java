@@ -13,7 +13,7 @@ public class App {
 		//Test.testTransceiver();	
 		//Test.testAccessManager();
 		//Test.testServerSearch();
-		Test.testServer();
+		//Test.testServer();
 		Test.testClient();
 	}
 
