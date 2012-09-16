@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>HelloWolrd</h3>
+<h3>HelloWorld!!</h3>
 <form action="testClient.jsp">
 <input type="submit" value="test Client" name="submitButton">
 </form>

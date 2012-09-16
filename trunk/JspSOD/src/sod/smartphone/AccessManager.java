@@ -61,7 +61,7 @@ public class AccessManager implements Disposable {
 	public static void searchServer(String baseIP, SearchCallBack cb){		
 		final int TurnAroundWaitTime = 4000;
 		
-		MulticastSocket s = NetworkUtils.createMutlicastSocket(Constants.Multicast_IP, Constants.Multicast_Port);
+		MulticastSocket s = NetworkUtils.createMutlicastSocket(Constants.Multicast_IP, Constants.Multicast_Port_Send);
 		Transceiver t = null;
 		try {
 			Serializer se = new Serializer();
@@ -75,7 +75,7 @@ public class AccessManager implements Disposable {
 			byte[] buf = output.toByteArray();
 			DatagramPacket rawp = new DatagramPacket(buf, buf.length,
 					NetworkUtils.getMulticastAddr(),
-					Constants.Multicast_Port);
+					Constants.Multicast_Port_Send);
 			s.send(rawp);
 			s.close();
 			t = new Transceiver(null, Constants.Multicast_Port_Response);
