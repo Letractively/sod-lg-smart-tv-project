@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+    <!-- selected -->
+	<item 
+		android:state_selected="true"
+		android:drawable="@drawable/ana_bootmode_graph_up"/>
+		  
+	<!-- pressed -->    	
+	<item 
+		android:state_pressed="true" 
+		android:drawable="@drawable/ana_bootmode_graph_down"/>
+	
+	<!-- focused -->
+	<item 
+		android:state_focused="true"
+		android:drawable="@drawable/ana_bootmode_graph_up"/>
+	  
+	<!-- disabled -->    
+	<item 
+		android:state_enabled="false"
+		android:drawable="@drawable/ana_bootmode_graph_up"/>     
+	
+	<!-- default -->	  
+    <item
+		android:drawable="@drawable/ana_bootmode_graph_up"
+        />
+    
+    <!-- enabled -->
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/ana_bootmode_graph_up"/>
+    
+    <!-- disabled -->
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/ana_bootmode_graph_down"/>
+
+</selector>

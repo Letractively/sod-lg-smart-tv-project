@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+    
+    <!-- android:apiKey="0HRKYjKYJe_XFpxmWzkaeESFSmDnfqdsdtMH0Ug"  JaeYeong Com.. -->
+    <!-- android:apiKey="0HRKYjKYJe_UUDHrj5zwquEE2GRJExdnMS1RRKA"  Kook do Com.. -->
+    <!-- android:apiKey="006WN4edD7atkTHSRtRQ2M9BJVM5OhF60lBsGkQ"  JungMin Com -->
+    <com.google.android.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="600px"
+        android:apiKey="0HRKYjKYJe_XFpxmWzkaeESFSmDnfqdsdtMH0Ug"
+        android:clickable="true"
+        android:enabled="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/sendGeoPointButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="위치 전송하기"
+            android:background="@drawable/tvlocation_send" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="뒤로"
+            android:background="@drawable/tvlocation_back" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.sgsong.main"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED"/>
+    <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application android:icon="@drawable/icon" android:label="@string/app_name"
+    	android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:debuggable="true">
+    	
+        <activity
+            android:name=".TVManagerLoGo"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TVLocationManagerActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".AdminInputActivity"
+             android:label="@string/app_name"
+  			 >
+        </activity>
+        <activity android:name=".Run" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation"        
+                  android:label="@string/app_name">
+        </activity>
+        
+        
+		<uses-library android:name="com.google.android.maps" />
+		<activity android:name="controller">
+		    
+		</activity>
+    </application>
+    <uses-sdk android:minSdkVersion="7" />
+
+</manifest> 

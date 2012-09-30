@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- selected -->
+	<item 
+		android:state_selected="true"
+		android:drawable="@drawable/andmininput_activity_send_up"/>
+		  
+	<!-- pressed -->    	
+	<item 
+		android:state_pressed="true" 
+		android:drawable="@drawable/andmininput_activity_send_down"/>
+	
+	<!-- focused -->
+	<item 
+		android:state_focused="true"
+		android:drawable="@drawable/andmininput_activity_send_up"/>
+	  
+	<!-- disabled -->    
+	<item 
+		android:state_enabled="false"
+		android:drawable="@drawable/andmininput_activity_send_up"/>     
+	
+	<!-- default -->	  
+    <item
+		android:drawable="@drawable/andmininput_activity_send_up"
+        />
+    
+    <!-- enabled -->
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/ana_bootmode_setting_up"/>
+    
+    <!-- disabled -->
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/ana_bootmode_setting_down"/>
+
+</selector>
