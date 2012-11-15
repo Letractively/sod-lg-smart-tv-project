@@ -56,7 +56,7 @@ public class Networking {
 		});
 		
 		ConnectionBean.server.setReceiveHandler(new ServerReceiveHandler() {
-			Transceiver trans= new Transceiver(new InetSocketAddress("192.168.0.26", 2013));
+			Transceiver trans= new Transceiver(new InetSocketAddress("192.168.0.19", 2013));
 			public void onReceive(Packet pkt, int connid) {
 			//	logger.log("(server): 스루패스");
 				
