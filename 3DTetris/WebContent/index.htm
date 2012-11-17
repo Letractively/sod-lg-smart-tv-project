@@ -1,0 +1,309 @@
+﻿<!-- saved from url=(0040)http://www.benjoffe.com/code/games/torus -->
+<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+<META charset="utf-8">
+<META name="author" content="Ben Joffe">
+<META name="HandheldFriendly" content="True">
+<META name="MobileOptimized" content="320">
+<META name="viewport"
+	content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+<META content="on" http-equiv="cleartype">
+<META content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<TITLE>Ben Joffe | Torus</TITLE>
+<script type="text/javascript">
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      var socket;
+
+      function wsreceive(msg) {
+          //alert(msg.data);
+          sendinput(parseInt(msg.data));
+      }
+
+      function wsinit() {
+          var host = "ws://192.168.0.19:2012/";
+          try {
+              socket = new WebSocket(host);
+              socket.onopen = function (msg) { log("Welcome - status " + this.readyState); };
+              socket.onmessage = wsreceive;
+              socket.onclose = function (msg) { log("Disconnected - status " + this.readyState); };
+          }
+          catch (ex) { log(ex); }
+
+      };
+      
+      function wssend(msg) {
+          if (!msg) {
+              alert("Message can not be empty");
+              return;
+          }
+          try {
+              socket.send(msg);
+              log('Sent: ' + msg);
+          } catch (ex) {
+              log(ex);
+          }
+      };
+
+      function wsclose() {
+          socket.close();
+          socket = null;
+      };
+
+      wsinit();
+      //alert("ws initialized");
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  </script>
+<SCRIPT>
+	var _gaq = [ [ '_setAccount', 'UA-7116912-1' ], [ '_trackPageview' ] ];
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</SCRIPT>
+<LINK title="BenJoffe.com - RSS 2.0 Feed" rel="alternate"
+	type="application/rss+xml" href="rss.xml">
+<LINK rel="stylesheet" type="text/css" href="main.css">
+<SCRIPT type="text/javascript" src="main.js"></SCRIPT>
+<LINK rel="stylesheet" type="text/css" href="torus.css">
+<SCRIPT src="torus.js"></SCRIPT>
+
+<script type="text/javascript">
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+function sendinput(code) {
+    
+	/*
+	if(키가 눌린상태일때)
+	{
+		switch (i.keyCode) {
+		case 65:
+		case 37:
+			if (!u.left) {
+				u.left = true;
+				B(null, "left")
+			}
+			break;
+		case 68:
+		case 39:
+			if (!u.right) {
+				u.right = true;
+				B(null, "right")
+			}
+			break;
+		case 83:
+		case 40:
+			if (u.down === false) {
+				u.down = true;
+				B()
+			}
+			break;
+		case 87:
+		case 38:
+			Game.rotate(+1);
+			break;
+		case 32:
+			Game.rotate(-1);
+			break
+		}
+		i.preventDefault();
+	//	return false
+	}
+	else //키가 떼졌을때
+	{
+		switch (i.keyCode) {
+		case 65:
+		case 37:
+			u.left = false;
+			break;
+		case 68:
+		case 39:
+			u.right = false;
+			break;
+		case 83:
+		case 40:
+			u.down = false;
+			break
+		}
+		i.preventDefault();
+	//	return false
+	}
+	
+	*/
+};
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+</script>
+
+<META name="GENERATOR" content="MSHTML 9.00.8112.16455">
+</HEAD>
+<BODY>
+	<DIV id="benjoffe">
+		<H1>Ben Joffe</H1>
+		<DIV id="intro">
+			<UL id="nav">
+				<LI><A href="http://www.benjoffe.com/">Home</A>
+				<LI><A href="http://www.benjoffe.com/code">Code</A>
+				<LI><A href="http://www.benjoffe.com/contact">Contact</A></LI>
+			</UL>
+			<A id="fundraiser" href="http://au.movember.com/mospace/3945597"
+				target="_blank"> I'm participating in Movember! Silly pics of
+				the moustache will be posted in the days to come.<BR> If you
+				enjoy Torus please consider donating to this cause! <EM>Click
+					here to continue.</EM>
+			</A>
+			<UL id="networks">
+				<LI id="networks-rs"><A href="http://www.benjoffe.com/rss.xml"
+					target="_blank"><SPAN>RSS Feed</SPAN></A>
+				<LI id="networks-tw"><A href="http://www.twitter.com/benjoffe"
+					target="_blank"><SPAN>Twitter</SPAN></A>
+				<LI id="networks-li"><A
+					href="http://www.linkedin.com/in/benjoffe" target="_blank"><SPAN>LinkedIn</SPAN></A>
+				<LI id="networks-gp"><A
+					href="https://plus.google.com/101728156492025477790"
+					target="_blank"><SPAN>Google+</SPAN></A>
+				<LI id="networks-gh"><A href="https://github.com/benjoffe"
+					target="_blank"><SPAN>GitHub</SPAN></A></LI>
+			</UL>
+		</DIV>
+		<DIV id="content">
+			<DIV id="loading">You must enable JavaScript to play this game.</DIV>
+			<SCRIPT>
+				var PROMOS = [ '' ];
+				if (!window.CanvasRenderingContext2D) {
+					document.getElementById('loading').innerHTML = 'Your browser doesn\'t support canvas, if you are using IE then the <a href="v1/">older version</a> will likely work.<br>I suggest you download a standards compliant browser such as <a href="http://www.opera.com/">Opera</a>.';
+				} else {
+					document.getElementById('loading').innerHTML = '<img src="loading.gif" alt="" style="width:16px;height:16px;vertical-align:top;"> Loading game...';
+				}
+			</SCRIPT>
+
+			<DIV id="container">
+				<DIV id="menu">
+					<DIV id="menu_area">
+						<DIV id="screen0">
+							<DIV id="helpBox">
+								<P>
+									<B>How To Play</B><BR> Use the arrow keys to guide the
+									falling blocks, spacebar and the up-arrow will rotate the block
+									in opposite directions. Alternatively the keys A,W,S and D can
+									be used as arrow keys for the same purpose.<BR>
+									<BR> When a complete horizontal ring of 15 blocks is
+									occupied by pieces the row will collapse and earn 100 points.
+									If multiple rows are cleared at a time you will earn bonus
+									points.
+								</P>
+								<A href="http://widgets.opera.com/author/Benjamin%20Joffe">More
+									widgets by this author</A>
+							</DIV>
+							<DIV id="copy">
+								©2010 <A href="http://www.benjoffe.com/">Benjamin Joffe</A>
+							</DIV>
+							<DIV id="but_main0" class="but"></DIV>
+						</DIV>
+						<DIV id="screen1">
+							<DIV id="go1" class="but"></DIV>
+							<DIV id="go2" class="nonstick"></DIV>
+							<DIV id="go3" class="nonstick"></DIV>
+							<DIV id="but_main1" class="but"></DIV>
+						</DIV>
+						<DIV id="screen2">
+							<DIV id="quote"></DIV>
+							<DIV id="but_play" class="but"></DIV>
+							<DIV id="but_settings" class="but"></DIV>
+							<DIV id="but_high" class="but"></DIV>
+							<DIV id="but_help" class="but"></DIV>
+						</DIV>
+						<DIV id="screen3">
+							<SELECT id="bestType"><OPTION>Traditional</OPTION>
+								<OPTION>Time Attack</OPTION>
+								<OPTION>Garbage</OPTION></SELECT>
+							<DIV id="best1"></DIV>
+							<DIV id="best2"></DIV>
+							<DIV id="best3"></DIV>
+							<DIV id="but_main2" class="but"></DIV>
+						</DIV>
+						<DIV id="screen4">
+							<DIV id="div_base">
+								<LABEL>Skin: <SELECT id="set_base"><OPTION>Glass</OPTION>
+										<OPTION>Storybook</OPTION></SELECT></LABEL>
+							</DIV>
+							<DIV id="div_ghost">
+								<LABEL><INPUT id="set_ghost" type="checkbox">
+									Show ghost</LABEL>
+							</DIV>
+							<DIV id="but_main3" class="but"></DIV>
+						</DIV>
+					</DIV>
+				</DIV>
+				<DIV id="out"></DIV>
+				<DIV id="playing">
+					<CANVAS id="canvas" height="400" width="200"></CANVAS>
+					<DIV id="paused">
+						<DIV id="but_resume" class="but"></DIV>
+						<DIV id="but_restart" class="but"></DIV>
+						<DIV id="but_quit" class="but"></DIV>
+					</DIV>
+					<DIV id="panel">
+						<DIV id="title1"></DIV>
+						<DIV id="title2"></DIV>
+						<DIV id="title3"></DIV>
+						<DIV id="score"></DIV>
+						<DIV id="time"></DIV>
+						<DIV id="next"></DIV>
+						<DIV id="but_pause" class="but"></DIV>
+					</DIV>
+					<DIV id="promo"></DIV>
+					<DIV id="gameover">
+						<DIV id="winner">
+							<FORM id="high_form">
+								You have achieved a high score, please enter your name:<BR>
+								<INPUT id="high_name" maxLength="20" type="text"> <INPUT
+									value="OK" type="submit">
+							</FORM>
+						</DIV>
+						<DIV id="newgame">
+							<DIV id="sorryText"></DIV>
+							<DIV id="skull"></DIV>
+							<DIV id="but_restart2" class="but"></DIV>
+							<DIV id="but_main4" class="but"></DIV>
+						</DIV>
+					</DIV>
+				</DIV>
+				<DIV id="close" class="nonstick"></DIV>
+			</DIV>
+			<IFRAME
+				style="border: currentColor; width: 140px; height: 21px; overflow: hidden;"
+				id="fblike" src="like.htm" frameBorder="0" allowTransparency="true"
+				scrolling="no"></IFRAME>
+			<!--
+<style>
+#gpromo {
+  position: absolute;
+  top: 455px;
+  left: 140px;
+}
+</style>
+<div id="gpromo">
+  <script type="text/javascript">
+  google_ad_client = "ca-pub-6708910800554441";
+  /* Ben Joffe */
+  google_ad_slot = "1530500387";
+  google_ad_width = 468;
+  google_ad_height = 15;
+  </script>
+  <script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+</div>
+-->
+		</DIV>
+		<DIV id="foot">
+			<P>© 2012 Ben Joffe</P>
+		</DIV>
+	</DIV>
+</BODY>
+</HTML>

@@ -1,0 +1,222 @@
+body {
+	background-image: none;
+}
+#content {
+	height: 475px;
+}
+#fblike {
+	top: 452px; position: absolute;
+}
+#container {
+	left: 170px; top: 0px; right: 170px; font-family: Arial; visibility: hidden; position: absolute; background-color: red;
+}
+#link {
+	top: 470px; width: 100%; text-align: center; font-size: small; position: absolute;
+}
+#footer {
+	padding-top: 500px; display: block;
+}
+canvas {
+	left: 0px; top: 0px; position: absolute;
+}
+#paused {
+	left: 48px; top: 346px; width: 110px; height: 30px; display: none; position: absolute;
+}
+#but_resume {
+	left: 7px; top: -150px; width: 86px; background-image: url("but_resume.png");
+}
+#but_restart {
+	left: 7px; top: -110px; width: 86px; background-image: url("but_restart.png");
+}
+#but_quit {
+	left: 7px; top: -70px; width: 86px; background-image: url("but_quit.png");
+}
+#score {
+	left: 19px; top: 33px; color: rgb(102, 102, 102); font-family: Arial; font-size: 14pt; font-weight: 700; position: absolute;
+}
+#time {
+	left: 19px; top: 83px; color: rgb(102, 102, 102); font-family: Arial; font-size: 14pt; font-weight: 700; position: absolute;
+}
+#playing {
+	background-position: 8px 320px; left: 0px; top: 0px; width: 200px; height: 450px; position: absolute; background-image: url("base0.png"); background-repeat: no-repeat;
+}
+#panel {
+	left: 250px; top: 200px; width: 94px; height: 233px; display: none; position: absolute; background-image: url("panel.png");
+}
+#promo {
+	left: 510px; top: -100px; position: absolute;
+}
+#title1 {
+	left: -17px; top: -74px; width: 125px; height: 126px; position: absolute; background-image: url("title_traditional.png");
+}
+#title2 {
+	left: -29px; top: -76px; width: 150px; height: 108px; position: absolute; background-image: url("title_time.png");
+}
+#title3 {
+	left: -8px; top: -83px; width: 112px; height: 97px; position: absolute; background-image: url("title_garbage.png");
+}
+#gameover {
+	left: 200px; top: 175px; width: 253px; height: 221px; color: rgb(51, 51, 51); font-size: 10pt; display: none; position: absolute; background-image: url("game_over.png");
+}
+#winner {
+	background-position: 0px 64px; left: 19px; top: 50px; width: 205px; height: 200px; padding-left: 11px; position: absolute; background-image: url("coins.png"); background-repeat: no-repeat;
+}
+#winner form {
+	margin: 0px; padding: 0px;
+}
+#but_main4 {
+	left: 150px; top: 167px; width: 86px; background-image: url("but_main.png");
+}
+#but_restart2 {
+	left: 150px; top: 127px; width: 86px; background-image: url("but_restart.png");
+}
+#sorryText {
+	left: 30px; top: 45px; width: 205px; position: absolute;
+}
+#skull {
+	left: -35px; top: 90px; width: 120px; height: 150px; position: absolute; background-image: url("skull.png");
+}
+#but_pause {
+	left: 15px; top: 180px; width: 64px; background-image: url("but_pause.png");
+}
+#next {
+	left: 7px; top: 127px; width: 80px; height: 50px; position: absolute; background-image: url("blocks.png");
+}
+#menu {
+	background-position: 92px 0px; left: 0px; top: 234px; width: 450px; height: 220px; position: absolute; background-image: url("menu.png"); background-repeat: no-repeat;
+}
+#menu_area {
+	left: 111px; top: 39px; width: 321px; height: 157px; overflow: hidden; position: absolute;
+}
+.nonstick {
+	-apple-dashboard-region: dashboard-region(control rectangle 0 0 0 0);
+}
+.but {
+	height: 36px; position: absolute; cursor: pointer; -apple-dashboard-region: dashboard-region(control rectangle 0 0 0 0);
+}
+.but:hover {
+	background-position: 0px -36px;
+}
+.but:active {
+	background-position: 0px -72px;
+}
+#screen0 {
+	background-position: 30px 4px; left: 321px; top: 0px; width: 321px; height: 157px; position: absolute; background-image: url("title_help.png"); background-repeat: no-repeat;
+}
+#copy {
+	left: 90px; top: 125px; color: rgb(68, 68, 68); font-size: 10pt; position: absolute;
+}
+#helpBox {
+	left: 90px; top: 8px; width: 220px; height: 100px; overflow: auto; font-size: 9pt; display: none; position: absolute;
+}
+#but_main0 {
+	left: 229px; top: 117px; width: 86px; background-image: url("but_main.png");
+}
+#screen1 {
+	background-position: 45px 7px; left: 0px; top: 157px; width: 321px; height: 157px; position: absolute; background-image: url("modes.png"); background-repeat: no-repeat;
+}
+#go1 {
+	width: 40px; height: 36px; position: absolute; cursor: pointer; background-image: url("but_go.png");
+}
+#go2 {
+	width: 40px; height: 36px; position: absolute; cursor: pointer; background-image: url("but_go.png");
+}
+#go3 {
+	width: 40px; height: 36px; position: absolute; cursor: pointer; background-image: url("but_go.png");
+}
+#go1 {
+	left: 75px; top: 110px;
+}
+#go2 {
+	left: 152px; top: 110px;
+}
+#go2:hover {
+	background-position: 0px -108px;
+}
+#go2:active {
+	background-position: 0px -144px;
+}
+#go3 {
+	left: 229px; top: 68px;
+}
+#go3:hover {
+	background-position: 0px -180px;
+}
+#go3:active {
+	background-position: 0px -216px;
+}
+#but_main1 {
+	left: 229px; top: 117px; width: 86px; background-image: url("but_main.png");
+}
+#screen2 {
+	left: 321px; top: 157px; width: 321px; height: 157px; position: absolute;
+}
+#quote {
+	left: 62px; top: 7px; width: 250px; color: rgb(255, 255, 255); font-family: Arial; font-size: 10pt; font-style: italic; font-weight: 700; position: absolute;
+}
+#quote b {
+	color: rgb(0, 0, 0);
+}
+#quote span {
+	padding-left: 50px; font-style: normal;
+}
+#but_play {
+	left: 71px; top: 115px; width: 62px; background-image: url("but_play.png");
+}
+#but_settings {
+	left: 137px; top: 115px; width: 75px; background-image: url("but_settings.png");
+}
+#but_help {
+	left: 256px; top: 76px; width: 60px; background-image: url("but_help.png");
+}
+#but_high {
+	left: 216px; top: 115px; width: 98px; position: absolute; background-image: url("but_high.png");
+}
+#screen3 {
+	background-position: 32px 5px; left: 642px; top: 157px; width: 321px; height: 157px; font-family: Arial; font-size: 9pt; position: absolute; background-image: url("title_high.png"); background-repeat: no-repeat;
+}
+#bestType {
+	left: 200px; top: 10px; width: 110px; position: absolute;
+}
+#best1 {
+	left: 90px; top: 40px; display: none; position: absolute;
+}
+#best2 {
+	left: 90px; top: 40px; display: none; position: absolute;
+}
+#best3 {
+	left: 90px; top: 40px; display: none; position: absolute;
+}
+#best1 {
+	display: block;
+}
+#but_main2 {
+	left: 228px; top: 115px; width: 86px; background-image: url("but_main.png");
+}
+#screen4 {
+	background-position: 32px 5px; left: 321px; top: 314px; width: 321px; height: 157px; font-family: Arial; font-size: 10pt; position: absolute; background-image: url("title_settings.png"); background-repeat: no-repeat;
+}
+#screen4 select {
+	width: 90px;
+}
+#div_base {
+	left: 150px; top: 10px; width: 160px; text-align: right; position: absolute; 
+}
+#div_blocks {
+	left: 150px; top: 35px; width: 160px; text-align: right; position: absolute;
+}
+#div_ghost {
+	left: 217px; top: 40px; width: 160px; position: absolute;
+}
+#but_main3 {
+	left: 228px; top: 115px; width: 86px; background-image: url("but_main.png");
+}
+#close {
+	width: 20px; height: 20px; display: none; position: absolute; background-image: url("close.png");
+}
+#close:hover {
+	background-position: 0px 20px;
+}
+#close:active {
+	background-position: 0px 40px;
+}
