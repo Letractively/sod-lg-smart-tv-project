@@ -1,0 +1,180 @@
+html {
+	background-image: url("/img/bg.png"); background-repeat: repeat-x; background-color: rgb(252, 252, 252); -webkit-text-size-adjust: none;
+}
+body {
+	margin: 0px; padding: 0px; text-align: center; line-height: 18px; font-family: "trebuchet MS", arial, sans-serif; font-size: 14px;
+}
+#benjoffe {
+	margin: 0px auto; width: 800px; text-align: left;
+}
+#benjoffe {
+	width: auto;
+}
+img {
+	border: currentColor;
+}
+a:hover {
+	color: rgb(204, 0, 0);
+}
+h1 {
+	margin: 0px; padding: 18px 0px 0px 9px; height: 36px; color: rgb(102, 102, 102); font-size: 24px; border-bottom-color: rgb(184, 184, 184); border-bottom-width: 1px; border-bottom-style: solid; text-shadow: #fff 0 1px 1px;
+}
+h2 {
+	margin: 0px; padding: 0px; color: rgb(68, 68, 68); font-size: 20px; text-shadow: #ccc 0 1px 1px;
+}
+h3 {
+	margin: 1em 0px; padding: 0px; color: rgb(34, 34, 34); font-size: 15px; text-shadow: #ccc 0 1px 1px;
+}
+#intro {
+	height: 44px; color: rgb(102, 102, 102); padding-right: 10px; border-bottom-color: rgb(110, 110, 110); border-bottom-width: 1px; border-bottom-style: solid; position: relative; text-shadow: #fff 0 1px 0;
+}
+#intro ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+#nav {
+	line-height: 44px; float: left;
+}
+#nav li {
+	float: left;
+}
+#nav a {
+	padding: 0px 10px; display: block;
+}
+#nav span {
+	padding: 0px 10px; display: block;
+}
+#nav a {
+	color: rgb(51, 51, 51);
+}
+#nav a:hover {
+	color: rgb(0, 0, 0); text-shadow: #e0e0e0 0 2px 2px;
+}
+#nav a:active {
+	color: rgb(153, 0, 0);
+}
+#nav span {
+	font-weight: bold;
+}
+#networks {
+	float: right;
+}
+#networks li {
+	padding: 7px 0px 0px 10px; float: left;
+}
+#networks li a {
+	border-radius: 10px; width: 30px; height: 30px; color: rgb(102, 102, 102); overflow: hidden; text-decoration: none; display: block; position: relative; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.6), 0px 2px 0px #f6f6f6; background-image: url("/img/networks.png"); background-color: rgba(0, 0, 0, 0.08);
+}
+#networks li span {
+	margin: -25px 0px 0px -23px; width: 80px; text-align: center; line-height: 35px; position: absolute; opacity: 0; -webkit-transition: opacity, margin-top 0.2s, 0.2s; transition: opacity 1s;
+}
+#networks li a:hover {
+	overflow: visible; background-color: transparent;
+}
+#networks li a:focus {
+	overflow: visible; background-color: transparent;
+}
+#networks li a:hover span {
+	margin-top: -35px; opacity: 1;
+}
+#networks li a:focus span {
+	margin-top: -35px; opacity: 1;
+}
+#networks-rs a {
+	background-position: 2px 1px;
+}
+#networks-tw a {
+	background-position: -38px 1px;
+}
+#networks-li a {
+	background-position: -78px 1px;
+}
+#networks-gp a {
+	background-position: -118px 1px;
+}
+#networks-gh a {
+	background-position: -158px 1px;
+}
+#fundraiser {
+	background: url("../img/heart.png") no-repeat 99% 50%; top: -47px; right: 0px; color: rgb(0, 0, 255); padding-right: 55px; font-weight: bold; text-decoration: none; position: absolute; text-shadow: 0 1px 0 #fff;
+}
+#fundraiser em {
+	font-style: normal; text-decoration: underline;
+}
+#fundraiser:hover {
+	color: rgb(202, 0, 255); text-shadow: 0 1px 0 #fff, 0 0 4px #fff;
+}
+#networks {
+	top: 10px; right: 10px; position: absolute; zoom: 0.9;
+}
+#content {
+	padding: 18px 10px 10px; clear: left; position: relative; min-height: 200px;
+}
+#foot {
+	margin: 0px 10px; padding: 10px 0px; text-align: right; color: rgb(102, 102, 102); clear: both; font-size: 0.9em; border-top-color: rgb(153, 153, 153); border-top-width: 1px; border-top-style: solid;
+}
+#foot a {
+	color: rgb(102, 102, 102);
+}
+#foot a:hover {
+	color: rgb(0, 0, 0);
+}
+p {
+	margin: 18px 0px;
+}
+ul {
+	list-style: square; margin: 0px 0px 18px; padding: 0px 0px 0px 18px;
+}
+p + ul {
+	margin-top: -9px;
+}
+ol {
+	margin: 18px 0px; padding: 0px 0px 0px 18px;
+}
+p:first-child {
+	margin-top: 0px;
+}
+ul:first-child {
+	margin-top: 0px;
+}
+h2:first-child ol:first-child {
+	margin-top: 0px;
+}
+p:last-child {
+	margin-bottom: 0px;
+}
+ul:last-child {
+	margin-bottom: 0px;
+}
+ol:last-child {
+	margin-bottom: 0px;
+}
+h2:last-child {
+	margin-bottom: 0px;
+}
+.posts {
+	list-style: none; margin: 0px; padding: 0px 0px 1em;
+}
+.posts::after {
+	clear: left; display: block; content: " ";
+}
+.posts li {
+	margin: 0px; padding: 0px;
+}
+.posts a {
+	padding: 5px 0px; clear: left; text-decoration: none; display: block;
+}
+.posts small {
+	color: rgb(136, 136, 136);
+}
+.posts span {
+	text-decoration: underline; text-shadow: #ddd 0 1px 1px;
+}
+.posts small {
+	padding-left: 5px; border-left-color: rgb(153, 153, 153); border-left-width: 5px; border-left-style: solid; display: block;
+}
+.posts span {
+	padding-left: 5px; border-left-color: rgb(153, 153, 153); border-left-width: 5px; border-left-style: solid; display: block;
+}
+.posts a:hover * {
+	border-color: rgb(204, 102, 102);
+}
