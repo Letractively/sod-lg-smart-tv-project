@@ -85,18 +85,12 @@ function sendinput(code) {
 			
 			break;
 		case 37: //왼
-			if (!u.left) {
-				u.left = true;
-				B(null, "left")
-			}
+			Game.move(-1);
 		//	i.preventDefault();
 		//	u.left = false;
 			break;
 		case 39 :  //오른
-			if (!u.right) {
-				u.right = true;
-				B(null, "right")
-			}
+			Game.move(1);
 		//	i.preventDefault();
 		//	u.right = false;
 			break;
