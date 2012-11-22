@@ -11,6 +11,22 @@
 <META content="on" http-equiv="cleartype">
 <META content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <TITLE>Ben Joffe | Torus</TITLE>
+<SCRIPT>
+	var _gaq = [ [ '_setAccount', 'UA-7116912-1' ], [ '_trackPageview' ] ];
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</SCRIPT>
+<LINK title="BenJoffe.com - RSS 2.0 Feed" rel="alternate"
+	type="application/rss+xml" href="rss.xml">
+<LINK rel="stylesheet" type="text/css" href="main.css">
 <script type="text/javascript">
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       var socket;
@@ -54,89 +70,117 @@
       //alert("ws initialized");
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   </script>
-<SCRIPT>
-	var _gaq = [ [ '_setAccount', 'UA-7116912-1' ], [ '_trackPageview' ] ];
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
-				: 'http://www')
-				+ '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</SCRIPT>
-<LINK title="BenJoffe.com - RSS 2.0 Feed" rel="alternate"
-	type="application/rss+xml" href="rss.xml">
-<LINK rel="stylesheet" type="text/css" href="main.css">
 <SCRIPT type="text/javascript" src="main.js"></SCRIPT>
-<LINK rel="stylesheet" type="text/css" href="torus.css">
+<LINK rel="stylesheet" type="text/css" href="torus.css">\
 <SCRIPT src="torus.js"></SCRIPT>
 
 <script type="text/javascript">
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function sendinput(code) {
-    
-	/*
-	if(키가 눌린상태일때)
-	{
-		switch (i.keyCode) {
-		case 65:
-		case 37:
+  	
+	switch (code) {
+		case 38: //위
+			Game.rotate(+1);
+			
+			break;
+		case 37: //왼
 			if (!u.left) {
 				u.left = true;
 				B(null, "left")
 			}
+		//	i.preventDefault();
+		//	u.left = false;
 			break;
-		case 68:
-		case 39:
+		case 39 :  //오른
 			if (!u.right) {
 				u.right = true;
 				B(null, "right")
 			}
+		//	i.preventDefault();
+		//	u.right = false;
 			break;
-		case 83:
-		case 40:
+		case 40 : //아래
 			if (u.down === false) {
 				u.down = true;
 				B()
 			}
+		//	i.preventDefault();
+		//	u.down = false;
 			break;
-		case 87:
-		case 38:
-			Game.rotate(+1);
+		case 32:// play
+			d(321, 0, "x")
 			break;
-		case 32:
-			Game.rotate(-1);
-			break
+		case 27://go
+			Control.startGame(1)
+			break;
 		}
-		i.preventDefault();
-	//	return false
-	}
-	else //키가 떼졌을때
-	{
-		switch (i.keyCode) {
-		case 65:
-		case 37:
-			u.left = false;
-			break;
-		case 68:
-		case 39:
-			u.right = false;
-			break;
-		case 83:
-		case 40:
-			u.down = false;
-			break
-		}
-		i.preventDefault();
-	//	return false
-	}
 	
-	*/
-};
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+	i.preventDefault();
+	return false
+		/*
+		if(키가 눌린상태일때)
+		{
+			switch (i.keyCode) {
+			case 65:
+			case 37:
+				if (!u.left) {
+					u.left = true;
+					B(null, "left")
+				}
+				break;
+			case 68:
+			case 39:
+				if (!u.right) {
+					u.right = true;
+					B(null, "right")
+				}
+				break;
+			case 83:
+			case 40:
+				if (u.down === false) {
+					u.down = true;
+					B()
+				}
+				break;
+			case 87:
+			case 38: //위
+				Game.rotate(+1);
+				break;
+			case 32:  /스페이스
+				Game.rotate(-1);
+				break
+			}
+			i.preventDefault();
+			
+			//게임시작?
+			// Control.startGame(1)
+		//	return false
+		}
+		else //키가 떼졌을때
+		{
+			switch (i.keyCode) {
+			case 65:
+			case 37:
+				u.left = false;
+				break;
+			case 68:
+			case 39:
+				u.right = false;
+				break;
+			case 83:
+			case 40:
+				u.down = false;
+				break;
+			}
+			i.preventDefault();
+		//	return false
+		}
+		
+		 */
+	};
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
 </script>
 
 <META name="GENERATOR" content="MSHTML 9.00.8112.16455">
