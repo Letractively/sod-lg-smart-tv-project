@@ -1373,6 +1373,38 @@ var Game = new function() {
 	this.gameOver = function() {
 		A.pause()
 	};
+	this.socketinput = function(code){
+		switch (code) {
+		case 38: //위
+			Game.rotate(+1);
+
+			break;
+		case 37: //왼
+			Game.move(-1);
+			//	i.preventDefault();
+			//	u.left = false;
+			break;
+		case 39: //오른
+			Game.move(1);
+			//	i.preventDefault();
+			//	u.right = false;
+			break;
+		case 40: //아래
+			//	if (u.down === false) {
+			//		Game.u.down = true;
+			//		B()
+			//	}
+			//	i.preventDefault();
+			//	u.down = false;
+			break;
+		case 32:// play
+			d(321, 0, "x")
+			break;
+		case 27://go
+			Control.startGame(1)
+			break;
+		}
+	}
 	var u = {
 		down : false
 	};
@@ -1928,6 +1960,7 @@ var Game = new function() {
 		a.setTarget(a._target + i);
 		return true
 	};
+	
 	this.rotate = function(i, x) {
 		if (d == 0) {
 			return false
@@ -1943,6 +1976,7 @@ var Game = new function() {
 		}
 		return true
 	}
+	
 };
 (function() {
 	var a = [];

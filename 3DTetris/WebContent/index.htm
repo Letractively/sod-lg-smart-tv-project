@@ -33,7 +33,8 @@
 
       function wsreceive(msg) {
           //alert(msg.data);
-          sendinput(parseInt(msg.data));
+     //     sendinput(parseInt(msg.data));
+    	  Game.socketinput(parseInt(msg.data));
       }
 
       function wsinit() {
@@ -77,30 +78,31 @@
 <script type="text/javascript">
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function sendinput(code) {
-  	
-	switch (code) {
+
+	function sendinput(code) {
+
+		switch (code) {
 		case 38: //위
 			Game.rotate(+1);
-			
+
 			break;
 		case 37: //왼
 			Game.move(-1);
-		//	i.preventDefault();
-		//	u.left = false;
+			//	i.preventDefault();
+			//	u.left = false;
 			break;
-		case 39 :  //오른
+		case 39: //오른
 			Game.move(1);
-		//	i.preventDefault();
-		//	u.right = false;
+			//	i.preventDefault();
+			//	u.right = false;
 			break;
-		case 40 : //아래
-			if (u.down === false) {
-				u.down = true;
-				B()
-			}
-		//	i.preventDefault();
-		//	u.down = false;
+		case 40: //아래
+			//	if (u.down === false) {
+			//		Game.u.down = true;
+			//		B()
+			//	}
+			//	i.preventDefault();
+			//	u.down = false;
 			break;
 		case 32:// play
 			d(321, 0, "x")
@@ -109,71 +111,12 @@ function sendinput(code) {
 			Control.startGame(1)
 			break;
 		}
-	
-	i.preventDefault();
-	return false
-		/*
-		if(키가 눌린상태일때)
-		{
-			switch (i.keyCode) {
-			case 65:
-			case 37:
-				if (!u.left) {
-					u.left = true;
-					B(null, "left")
-				}
-				break;
-			case 68:
-			case 39:
-				if (!u.right) {
-					u.right = true;
-					B(null, "right")
-				}
-				break;
-			case 83:
-			case 40:
-				if (u.down === false) {
-					u.down = true;
-					B()
-				}
-				break;
-			case 87:
-			case 38: //위
-				Game.rotate(+1);
-				break;
-			case 32:  /스페이스
-				Game.rotate(-1);
-				break
-			}
-			i.preventDefault();
-			
-			//게임시작?
-			// Control.startGame(1)
-		//	return false
-		}
-		else //키가 떼졌을때
-		{
-			switch (i.keyCode) {
-			case 65:
-			case 37:
-				u.left = false;
-				break;
-			case 68:
-			case 39:
-				u.right = false;
-				break;
-			case 83:
-			case 40:
-				u.down = false;
-				break;
-			}
-			i.preventDefault();
-		//	return false
-		}
-		
-		 */
+
+		//	i.preventDefault();
+		return false
+
 	};
-	
+
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 </script>
 
