@@ -4,6 +4,10 @@ function LinearMotion(a) {
 	this._path = [ 0, 0 ];
 	this._target = 0
 }
+var u = {
+		down : false
+	};
+	
 LinearMotion.prototype = {
 	reset : function() {
 		this._path = [ 0, 0 ];
@@ -1373,6 +1377,8 @@ var Game = new function() {
 	this.gameOver = function() {
 		A.pause()
 	};
+	
+
 	this.socketinput = function(code){
 		switch (code) {
 		case 38: //위
@@ -1390,12 +1396,15 @@ var Game = new function() {
 			//	u.right = false;
 			break;
 		case 40: //아래
-			//	if (u.down === false) {
-			//		Game.u.down = true;
-			//		B()
-			//	}
-			//	i.preventDefault();
-			//	u.down = false;
+			//	if (u.down == false) {
+					u.down = true;
+					B();
+				//}
+				//i.preventDefault();
+					//u.down = false;
+			break;
+		case 41: //아래버튼 떼기
+			//u.down = false;
 			break;
 		case 32:// play
 			d(321, 0, "x")
@@ -1405,9 +1414,6 @@ var Game = new function() {
 			break;
 		}
 	}
-	var u = {
-		down : false
-	};
 	function t(i) {
 		switch (i.keyCode) {
 		case 65:
