@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+
+    <!-- android:apiKey="0HRKYjKYJe_W4T_Os9HT9y5V_QSunrqwHfcgW0Q"  JaeYeong Com.. -->
+    <!-- android:apiKey="0HRKYjKYJe_UUDHrj5zwquEE2GRJExdnMS1RRKA"  Kook do Com.. -->
+	<!-- android:apiKey="006WN4edD7atkTHSRtRQ2M9BJVM5OhF60lBsGkQ"  JungMin Com -->
+    <com.google.android.maps.MapView
+        android:id="@+id/mapviewer"
+        android:layout_width="fill_parent"
+        android:layout_height="600px"
+        android:apiKey="0HRKYjKYJe_W4T_Os9HT9y5V_QSunrqwHfcgW0Q"
+        android:clickable="true"
+        android:enabled="true" />
+    
+  
+</LinearLayout>
+

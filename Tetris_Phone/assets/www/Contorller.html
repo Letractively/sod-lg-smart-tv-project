@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html charset="ko">
+	<head>
+		<meta charset="euc-kr">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maimum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+		<link rel="stylesheet" href="gcc/css/game.css">
+		<script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+		<script type="text/javascript" charset="ko" src="gcc/js/phonegap-1.4.1.js"></script>
+		<script type="text/javascript" charset="ko" src="gcc/js/myPlugin.js"></script>
+		<<script type="text/javascript" charset="ko" src="gcc/js/game.js"></script>
+	</head>
+	<body bgcolor="black" >
+		<div data-role="page" data-theme="a" >
+			<div data-role="content">
+				<div id="keyPad">
+						<div class="ui-grid-b">
+							<div class="ui-block-a">
+								<img src="gcc/images/arrow/onebtn.png" OnMouseOut="na_restore_img_src('image0', 'document')" OnMouseOver="na_change_img_src('image0', 'document', 'gcc/images/arrow/onebtn_hover.png', true)" name='image0'onclick="EventKeyPad('space')" width='30%' height='10%'attr='start'/> 
+							</div>
+							<div class="ui-block-b">
+								<img src="gcc/images/arrow/basic.png"height='10%' /> 
+							</div>
+							<div class="ui-block-c">
+								<img src="gcc/images/arrow/basic.png" height='10%'/> 
+							</div>
+							<div class="ui-block-a">
+								<img src="gcc/images/arrow/basic.png"  style="opacity:0; " attr='non'/> 
+							</div>
+							<div class="ui-block-b">
+								<img src="gcc/images/arrow/up.png" OnMouseOut="na_restore_img_src('image1', 'document')" OnMouseOver="na_change_img_src('image1', 'document', 'gcc/images/arrow/up_hover.png', true)" name='image1'onclick="EventKeyPad('left')" width='100%' height='25%'attr='up'/> 
+							</div>
+							<div class="ui-block-c">
+								<img src="gcc/images/arrow/basic.png" style="opacity:0" attr='non'/> 
+							</div>
+							<div class="ui-block-a">								
+								<img src="gcc/images/arrow/left.png" OnMouseOut="na_restore_img_src('image2', 'document')" OnMouseOver="na_change_img_src('image2', 'document', 'gcc/images/arrow/left_hover.png', true)" name='image2' onclick="EventKeyPad('down')" width='100%' height='20%' attr='left'/> 
+							</div>
+							<div class="ui-block-b">
+								<img src="gcc/images/arrow/basic.png" height='15%' style="opacity:0" attr='non'/> 
+							</div>
+							<div class="ui-block-c">
+								<img src="gcc/images/arrow/right.png" OnMouseOut="na_restore_img_src('image3', 'document')" OnMouseOver="na_change_img_src('image3', 'document', 'gcc/images/arrow/right_hover.png', true)" name='image3' onclick="EventKeyPad('up')" width='100%' height='20%' attr='right'/> 
+							</div>
+							<div class="ui-block-a">
+								<img src="gcc/images/arrow/basic.png" style="opacity:0" attr='non'/> 
+							</div>
+							<div class="ui-block-b">
+								<img src="gcc/images/arrow/down.png" OnMouseOut="na_restore_img_src('image4', 'document')" OnMouseOver="na_change_img_src('image4', 'document', 'gcc/images/arrow/down2_hover.png', true)" name='image4' onclick="EventKeyPad('right')" width='100%' height='25%' attr='down'/> 
+							</div>
+							<div class="ui-block-c">
+								<img src="gcc/images/arrow/basic.png" style="opacity:0" attr='non'/> 
+							</div>
+							<div class="ui-block-a">
+								<img src="gcc/images/arrow/threebtn.png" OnMouseOut="na_restore_img_src('image6', 'document')" OnMouseOver="na_change_img_src('image6', 'document', 'gcc/images/arrow/threebtn_hover.png', true)" name='image6'onclick="EventKeyPad('esc')" width='30%' height='10%'attr='reset'/> 
+							</div>
+							<div class="ui-block-b">
+								<img src="gcc/images/arrow/basic.png" height='10%' /> 
+							</div>
+							<div class="ui-block-c">
+								<img src="gcc/images/arrow/basic.png" height='10%'/> 
+							</div>
+						</div><!-- /grid-c -->
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
