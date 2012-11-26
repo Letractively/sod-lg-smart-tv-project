@@ -49,7 +49,7 @@ function vibrate(option) { // vibrate structure function
 	case 0:
 		// Game Start & Game End
 		navigator.notification.vibrate(3000);
-		alert(option);
+//		alert(option);
 		break;
 	case 1:
 		// Remove four line
