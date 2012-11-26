@@ -39,7 +39,9 @@
       }
 
       function wsinit() {
-          var host = "ws://192.168.0.19:2012/";
+       
+       	  var host = "ws://"+ document.location.hostname +":2012/";
+       	alert(host);
           try {
               socket = new WebSocket(host);
               socket.onopen = function (msg) { log("Welcome - status " + this.readyState); };
