@@ -61,7 +61,8 @@ public class Main {
 		
 		server.setReceiveHandler(new ServerReceiveHandler() {
 
-			Transceiver trans= new Transceiver(new InetSocketAddress("192.168.0.19", 2013));
+			String localip = NetworkUtils.getLocalIP();
+			Transceiver trans= new Transceiver(new InetSocketAddress(localip, 2013));
 			@Override
 			public void onReceive(Packet pkt, int connid) {
 				logger.log("ReceivePacket\n");
