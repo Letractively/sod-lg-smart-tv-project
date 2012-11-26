@@ -64,7 +64,7 @@ public class Main {
 			Transceiver trans= new Transceiver(new InetSocketAddress("192.168.0.19", 2013));
 			@Override
 			public void onReceive(Packet pkt, int connid) {
-				logger.log("스루패스\n");
+				logger.log("ReceivePacket\n");
 			//	server.send(pkt, connid);
 				trans.send(pkt);	
 
