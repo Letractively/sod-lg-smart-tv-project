@@ -17,22 +17,24 @@ public class GCCService extends DroidGap {
 
 //	AnAServiceNet net;
 	private ProgressDialog dialog;
-	/*
-	public void InitHTML() {
-		 super.loadUrl("file:///android_asset/www/Contorller.html");
-	}
-	*/	 
+	
+//	public void InitHTML() {
+//		 super.loadUrl("file:///android_asset/www/Contorller.html");
+//	}
+		 
 	public void Layout_Initalize() {
 		TvSearch = (ImageButton) findViewById(R.id.TvSearch);
 		ServiceLocation = (ImageButton) findViewById(R.id.ServiceLocation);
 		ServiceList = (ImageButton) findViewById(R.id.InstallService);
+		
 		TvSearch.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
+
 				Intent intent = new Intent(GCCService.this, TVServerListActivity.class);
 				startActivity(intent);
-				// InitHTML();
+			
 				}
 			}
 		);
